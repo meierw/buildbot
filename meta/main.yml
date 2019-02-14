@@ -13,9 +13,6 @@ galaxy_info:
       versions:
         - 7
 
-  galaxy_tags:
-    - buildbot
-    - master
-    - slave
+  galaxy_tags: [buildbot]
 
 dependencies: []
