@@ -1,1 +1,50 @@
 ---
+# - name: ensure gcc is installed
+#   package:
+#     name: gcc
+#     state: present
+
+# - name: get pip script path
+#   shell: "which {{ pip_executable }}"
+#   register: pip_path
+
+# - name: assert that pip script path is a valid linux path
+#   assert: { that: " pip_path.stdout is match('^(\\/[^\\/ ]*)+\\/?$') " }
+
+# - name: read pip script
+#   shell: "cat {{ pip_path.stdout }}"
+#   register: pip_script
+
+# - name: get python_executable from pip script first line
+#   set_fact: python_executable="{{ pip_script.stdout_lines[0] | regex_search('(\/[^\/ ]*)+\/?') }}"
+
+# - name: get python version
+#   shell: "{{ python_executable }} --version"
+#   register: python_version
+
+# - name: assert that python is version 3
+#   assert: { that: " python_version.stdout is match('^(Python 3)') " }
+
+# - name: run Python.h location script
+#   shell: "echo -e \"{{ lookup('file', 'files/python_h_located.py') }}\" | {{ python_executable }}"
+#   register: python_h_located
+
+# - name: assert that Python.h is located
+#   assert: { that: " python_h_located.stdout == 'True' " }
+
+
+
+
+# - name: install buildbot
+#   shell: >-
+#     {{ pip_executable }} install buildbot[bundle]==2.0.0
+#     --install-option="--install-scripts=/bin"
+
+
+# - copy:
+#     src: files/master.cfg.py
+#     dest: "{{ buildbot_master_dir }}/master.cfg"
+
+# - shell: "buildbot checkconfig {{ buildbot_master_dir }}"
+
+# - shell: "buildbot reconfig {{ buildbot_master_dir }}"
