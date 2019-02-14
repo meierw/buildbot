@@ -1,17 +1,29 @@
 buildbot
 ========
 
-Ansible role which installs Buildbot master and/or slave.
+Ansible role which installs Buildbot `>= 2.0.0` master and/or slave.
 
 Requirements
 ------------
 
-* `python3` with `dev` and `pip` tools
+* `python3.5+` with `dev` and `pip` tools
+
+> `python 2` support was dropped with Buildbot 2. [Source](http://docs.buildbot.net/2.0.0/manual/installation/requirements.html?highlight=requirement)
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+```yaml
+pip_executable: pip3
+```
+`pip` executable to use for Buildbot installation.
+
+-------
+```yaml
+assert_python3_dependencies: true
+```
+Assert presence of correct `python 3` dependencies for Buildbot installation.
+
 
 Dependencies
 ------------
