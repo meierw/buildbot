@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: meierw
+  description: Installs Buildbot master and/or slave.
+  company: Tieto Latvia
+
+  license: license (MIT)
+
+  min_ansible_version: 2.2
+
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+  galaxy_tags:
+    - buildbot
+    - master
+    - slave
+
+dependencies: []
