@@ -44,6 +44,11 @@
   register: buildbot_install
   changed_when: " 'Successfully installed' in buildbot_install.stdout "
 
+  #get python_executable if it's not set yet
+
+
+  #pip3.6 install --user tmuxp
+  #python2.7 -m site --user-base
 
 # - copy:
 #     src: files/master.cfg.py
